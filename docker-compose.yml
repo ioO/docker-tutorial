@@ -12,9 +12,21 @@ services:
     restart: always
     depends_on:
      - php
+     - mysql
 
   php:
     image: php:7.2.2-fpm-alpine3.7
     restart: always
     volumes:
      - "./web:/var/www/html/public"
+
+  mysql:
+    image: mariadb:latest
+    restart: always 
+    environment:
+     - MYSQL_DATABASE='dockertest'
+     - MYSQL_ROOT_PASSWORD='password'
+     - MYSQL_USER='user'
+     - MYSQL_PASSWORD='drowssap'
+    volumes:
+     - "./data/db/mysql:/var/lib/mysql"
