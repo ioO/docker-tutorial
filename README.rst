@@ -19,3 +19,11 @@ Mettre le fichier du dépôt *index.html* dans *web et defautl.conf* dans etc/ng
 Créer un fichier *docker-compose.yml* à la racine. Pour voir son contenu::
 
    git checkout 1-nginx
+
+2 - Ajout PHP
+
+Mettre le fichier *index.php* dans *web*
+
+Mettre à jour le fichier *docker-compose.yml*::
+
+   git checkout 2-php
